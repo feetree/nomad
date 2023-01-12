@@ -34,6 +34,7 @@ mkdir "$userDirectory/www"
 chown "-R" "$userName:$userName" "$userDirectory"
 chmod "-R" "711" "$userDirectory"
 usermod "-d" "$userDirectory" "$userName"
+usermod --shell /bin/bash "$userName"
 
 currentPath=$PWD
 
